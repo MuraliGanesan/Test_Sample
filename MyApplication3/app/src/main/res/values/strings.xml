@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="product_list">Product List</string>
+    <string name="detail">Product Detail</string>
+    <string name="favourite_list">Favourite Detail</string>
+    <string name="next">Next</string>
+    <string name="view_favourite">View Favourites</string>
+    <string name="previous">Previous</string>
+    <string name="category">Category: %1$s</string>
+    <string name="no_found">No Found</string>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/productListFragment">
+
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="com.assesment.te.listing.view.ProductListFragment"
+        android:label="@string/product_list"
+        tools:layout="@layout/fragment_product_list">
+
+        <action
+            android:id="@+id/action_ProductListFragment_to_ProductDetailFragment"
+            app:destination="@id/productDetailFragment"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.assesment.te.listing.view.ProductDetailFragment"
+        android:label="@string/detail"
+        tools:layout="@layout/fragment_product_detail">
+        <argument
+            android:name="productData"
+            app:argType="com.assesment.te.listing.data.model.ProductData" />
+        <action
+            android:id="@+id/action_ProductDetailFragment_to_ProductListFragment"
+            app:destination="@id/productListFragment" />
+
+        <action
+            android:id="@+id/action_ProductDetailFragment_to_ProductFavoriteList"
+            app:destination="@id/favouriteListFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/favouriteListFragment"
+        android:name="com.assesment.te.listing.view.FavouriteListFragment"
+        android:label="@string/favourite_list"
+        tools:layout="@layout/fragment_product_detail" />
+</navigation>
